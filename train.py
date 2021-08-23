@@ -6,7 +6,7 @@ import os
 def train(model, train_generator, val_generator, epochs = 50):
     model.compile(optimizer=tf.keras.optimizers.Adam(lr=0.0001),
                     loss='categorical_crossentropy',
-                    metrics=['accuracy'])
+                    metrics=['acc'])
 
     checkpoint_path = './snapshots'
     os.makedirs(checkpoint_path, exist_ok=True)
