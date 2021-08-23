@@ -4,7 +4,7 @@ from generator import Generator
 import os
 
 def train(model, train_generator, val_generator, epochs = 50):
-    model.compile(optimizer=tf.keras.optimizers.Adam(lr=0.0001),
+    model.compile(optimizer=tf.keras.optimizers.Adam(learning_rate=0.0001),
                     loss='categorical_crossentropy',
                     metrics=['acc'])
 
